@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1930">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' http://localhost:8080; img-src 'self' data:; object-src 'none'; base-uri 'self'">
+    <title>Entrar | NoteAra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- TELA DE LOGIN -->
+    <div id="loginScreen" class="login-screen">
+
+        <section class="login-brand">
+            <div class="brand">
+                <span class="brand-mark">N</span>
+                <span>NoteAra</span>
+            </div>
+
+            <div class="brand-copy">
+                <span class="eyebrow">SESI SENAI · GESTÃO DE ATIVOS</span>
+
+                <h1>
+                    Controle preciso para cada equipamento em movimento.
+                </h1>
+
+                <p>
+                    Uma central operacional segura para acompanhar
+                    notebooks, empréstimos e responsabilidade patrimonial.
+                </p>
+            </div>
+
+            <div class="brand-footer">
+                <span>© 2026 NoteAra</span>
+                <span>◈ Acesso protegido</span>
+            </div>
+        </section>
+
+        <section class="login-form-side">
+            <form id="loginForm" class="login-form">
+
+                <span class="eyebrow">BEM-VINDO DE VOLTA</span>
+
+                <h2>Entrar no sistema</h2>
+
+                <p id="loginMessage" class="login-message" role="alert" hidden></p>
+
+                <p class="muted">
+                    Use suas credenciais institucionais para continuar.
+                </p>
+
+                <label for="loginEmail">E-mail institucional</label>
+
+                <input
+                    id="loginEmail"
+                    type="email"
+                    placeholder="seu.nome@senai.local"
+                    autocomplete="username"
+                    maxlength="190"
+                    required
+                >
+
+                <label for="loginPassword">Senha</label>
+
+                <input
+                    id="loginPassword"
+                    type="password"
+                    placeholder="Digite sua senha"
+                    autocomplete="current-password"
+                    required
+                >
+
+                <button class="primary full" type="submit">
+                    Acessar central →
+                </button>
+
+                <p class="secure-note">
+                    ● Acesso protegido por token com validade limitada
+                </p>
+
+            </form>
+        </section>
+    </div>
+
+
+<script src="login.js" defer></script>
+</body>
+</html>

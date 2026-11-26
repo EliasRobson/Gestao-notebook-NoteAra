@@ -1,0 +1,8 @@
+br\com\projetointegrador\security\ApiTokenFilter.class
+br\com\projetointegrador\config\DemoAccountInitializer.class
+br\com\projetointegrador\controller\HealthController.class
+br\com\projetointegrador\controller\ApiController.class
+br\com\projetointegrador\security\ApiTokenService$IssuedToken.class
+br\com\projetointegrador\security\ApiTokenService.class
+br\com\projetointegrador\config\WebConfig.class
+br\com\projetointegrador\ProjetoIntegradorApplication.class

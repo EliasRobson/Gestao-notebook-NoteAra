@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1930">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' http://localhost:8080; img-src 'self' data:; object-src 'none'; base-uri 'self'">
+    <title>NoteAra | Administração</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- SISTEMA PRINCIPAL -->
+    <div id="app" class="app-shell hidden">
+
+        <!-- MENU LATERAL -->
+        <aside class="sidebar" id="sidebar">
+
+            <div class="sidebar-top">
+
+                <div class="brand">
+                    <span class="brand-mark">N</span>
+
+                    <span>
+                        NoteAra
+                        <small>SESI SENAI · ESTOQUE</small>
+                    </span>
+                </div>
+
+                <button class="sidebar-close" id="sidebarClose">
+                    ×
+                </button>
+
+            </div>
+
+            <div class="nav-caption">
+                CENTRAL DE OPERAÇÕES
+            </div>
+
+            <nav class="nav-list">
+
+                <button class="nav-link active" data-page="dashboard">
+                    <span>▦</span> Visão geral
+                </button>
+
+                <button class="nav-link" data-page="notebooks">
+                    <span>▣</span> Notebooks
+                </button>
+
+                <button class="nav-link" data-page="loans">
+                    <span>▤</span> Empréstimos
+                </button>
+
+                <button class="nav-link" data-page="history">
+                    <span>◷</span> Histórico
+                </button>
+
+                <button class="nav-link" data-page="users">
+                    <span>☺</span> Usuários
+                </button>
+
+                <button class="nav-link" data-page="reports">
+                    <span>▥</span> Relatórios
+                </button>
+
+                <button class="nav-link" data-page="location">
+                    <span>◉</span> Localização
+                </button>
+
+                <button class="nav-link" data-page="appearance">
+                    <span>◑</span> Aparência
+                </button>
+
+                <button class="nav-link" data-page="account">
+                    <span>⚿</span> Minha conta
+                </button>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <div class="sync">
+                    ● Dados sincronizados com o MySQL
+                </div>
+
+                <div class="profile">
+
+                    <div class="avatar" id="profileAvatar">H</div>
+
+                    <div>
+                        <b id="profileName">Henry</b>
+                        <small id="profileRole">Administrador</small>
+                    </div>
+
+                    <button id="logoutBtn" title="Sair">⇥</button>
+
+                </div>
+
+            </div>
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="main-area">
+
+            <header class="topbar">
+
+                <button class="menu-toggle" id="menuToggle">
+                    ☰
+                </button>
+
+                <div class="topbar-title">
+                    <span class="eyebrow">GESTÃO DE ATIVOS</span>
+
+                    <strong>
+                        NoteAra /
+                        <span id="breadcrumb">Visão geral</span>
+                    </strong>
+                </div>
+
+                <!-- CONTROLE DE TAMANHO -->
+                <div class="accessibility-controls">
+
+                    <button
+                        id="decreaseZoom"
+                        type="button"
+                        title="Diminuir tamanho"
+                        aria-label="Diminuir tamanho da interface"
+                    >−</button>
+
+                    <span id="zoomValue">100%</span>
+
+                    <button
+                        id="increaseZoom"
+                        type="button"
+                        title="Aumentar tamanho"
+                        aria-label="Aumentar tamanho da interface"
+                    >+</button>
+
+                    <button
+                        id="resetZoom"
+                        class="zoom-label"
+                        type="button"
+                    >
+                        Padrão
+                    </button>
+
+                </div>
+
+                <!-- NOTIFICAÇÕES -->
+                <div class="notification-area">
+
+                    <button
+                        id="notificationBell"
+                        class="notification-bell"
+                        type="button"
+                        aria-label="Abrir notificações"
+                        title="Notificações"
+                    >
+                        ☏
+                        <span id="notificationCount" class="notification-count">
+                            0
+                        </span>
+                    </button>
+
+                    <div
+                        id="notificationPanel"
+                        class="notification-panel"
+                    ></div>
+
+                </div>
+
+                <div class="system-status">
+                    ● Sistema operacional
+                </div>
+
+            </header>
+
+            <!-- CONTEÚDO DAS PÁGINAS -->
+            <div id="pageContent" class="page-content"></div>
+
+        </main>
+
+    </div>
+
+
+<div id="toast" class="toast"></div>
+<div id="modalRoot"></div>
+<script src="admin.js" defer></script>
+</body>
+</html>
